@@ -289,16 +289,6 @@ These commands verify backend tests, frontend build output, and security audit c
 
 > Before submission, ensure that screenshots do not contain personal data or real passwords.
 
-The following files and directories are expected to be included in the GitHub submission:
-
-- `kaynak-kodlar/`
-- `README.md`
-- `.gitignore`
-- `package.json`
-- `dokumantasyon/` (optional additional notes)
-- `gorseller/screenshots/`
-- Backend and frontend `package.json` files
-- Test files
 
 # Future Enhancements
 
