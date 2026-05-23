@@ -229,7 +229,6 @@ RESET_TOKEN_TTL_MINUTES=60
 # SMTP_FROM="ULVIS <no-reply@example.com>"
 ```
 
-> The `.env` file should never be committed to GitHub and is excluded through `.gitignore`.
 
 # Sample Accounts
 
