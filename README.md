@@ -1,8 +1,8 @@
 <h1 align="center">ULVIS</h1>
 
 <p align="center">
-  <strong>Kurumsal Lisans ve Varlık İzleme Sistemi</strong><br>
-  <i>Donanım, yazılım lisansı, zimmet, arıza, satınalma ve denetim süreçleri için rol tabanlı full-stack platform.</i>
+  <strong>Enterprise License and Asset Tracking System</strong><br>
+  <i>A role-based full-stack platform for managing hardware assets, software licenses, assignments, incidents, procurement, and audit operations.</i>
 </p>
 
 <p align="center">
@@ -23,136 +23,137 @@
 
 ---
 
-## İçindekiler
+# Table of Contents
 
-- [Proje Açıklaması](#proje-açıklaması)
-- [Projenin Amacı](#projenin-amacı)
-- [Özellikler](#özellikler)
-- [Son Geliştirmeler](#son-geliştirmeler)
-- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
-- [Klasör Yapısı](#klasör-yapısı)
-- [Kurulum](#kurulum)
-- [Çalıştırma](#çalıştırma)
-- [Ortam Değişkenleri](#ortam-değişkenleri)
-- [Örnek Hesaplar](#örnek-hesaplar)
-- [Test ve Doğrulama](#test-ve-doğrulama)
-- [Ekran Görüntüleri](#ekran-görüntüleri)
-- [Geliştirme Önerileri](#geliştirme-önerileri)
-- [Katkıda Bulunanlar](#katkıda-bulunanlar)
+- [Project Overview](#project-overview)
+- [Project Objectives](#project-objectives)
+- [Features](#features)
+- [Recent Improvements](#recent-improvements)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Environment Variables](#environment-variables)
+- [Sample Accounts](#sample-accounts)
+- [Testing and Validation](#testing-and-validation)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
+- [Contributors](#contributors)
+- [License](#license)
 
 ---
 
-## Proje Açıklaması
+# Project Overview
 
-ULVİS, üniversite ve kurum içi IT operasyonlarında kullanılan donanım varlıklarının, yazılım lisanslarının, zimmet süreçlerinin, arıza kayıtlarının, satınalma bilgilerinin ve yönetimsel denetim kayıtlarının merkezi olarak yönetilmesini sağlayan web tabanlı bir bilgi sistemidir.
+ULVIS is a web-based information system designed to centrally manage hardware assets, software licenses, assignment workflows, incident records, procurement information, and administrative audit processes within universities and corporate IT environments.
 
-Sistem; manuel takip, dağınık tablo dosyaları ve kişiye bağlı operasyon süreçleri yerine, tüm işlemlerin kayıt altına alındığı, rol bazlı erişimle korunduğu ve yöneticiler tarafından izlenebildiği bütünleşik bir platform sunar.
+Instead of relying on manual tracking methods, scattered spreadsheet files, and person-dependent operational procedures, the platform provides an integrated environment where all processes are systematically recorded, secured through role-based access control, and continuously monitored by administrators.
 
-## Projenin Amacı
+# Project Objectives
 
-Projenin temel amacı, IT varlık ve lisans yönetimini daha güvenli, izlenebilir, düzenli ve sürdürülebilir hale getirmektir. Bu kapsamda sistem:
+The primary objective of the project is to make IT asset and license management more secure, traceable, organized, and sustainable. To achieve this, the system:
 
-- Donanım ve yazılım lisanslarını merkezi envanterde toplar.
-- Personel, IT destek, satınalma ve IT müdürü rollerini ayrı yetkilerle yönetir.
-- Zimmet, iade, arıza ve lisans yenileme süreçlerini standart kurallara bağlar.
-- Lisans bitiş tarihleri için otomatik bildirimler üretir.
-- Kritik işlemleri loglayarak denetlenebilirlik sağlar.
-- Dashboard ekranlarıyla operasyonel görünürlük sağlar.
+- Centralizes hardware and software licenses within a unified inventory.
+- Manages personnel, IT support, procurement, and IT manager roles with separate authorization levels.
+- Standardizes assignment, return, incident, and license renewal processes through predefined business rules.
+- Generates automated notifications for upcoming license expiration dates.
+- Logs critical operations to ensure auditability and accountability.
+- Provides operational visibility through dashboard analytics and reporting tools.
 
-## Özellikler
+# Features
 
-| Alan | Açıklama |
+| Area | Description |
 | --- | --- |
-| Kimlik doğrulama | JWT tabanlı giriş, bcrypt parola hashleme, parola politikası ve zorunlu parola değiştirme |
-| Yetkilendirme | IT Müdürü, IT Destek, Satınalma ve Personel rolleri için API ve arayüz kısıtları |
-| Donanım yönetimi | Donanım ekleme, güncelleme, durum takibi, zimmet ve iade yönetimi |
-| Lisans yönetimi | Lisans ekleme, güncelleme, bitiş tarihi takibi, kişi limiti ve koltuk kapasitesi kontrolü |
-| Zimmet yönetimi | Donanım ve yazılım lisansı atama, onay, red ve iade işlemleri |
-| Arıza yönetimi | Personel arıza bildirimi, IT destek durum güncellemesi ve süreç takibi |
-| Satınalma | Tedarikçi ve fatura kayıtlarının yönetimi |
-| Bildirimler | Lisans bitişine 30, 15 ve 7 gün kala uygulama içi bildirim üretimi |
-| Denetim | İşlem logları ve yönetimsel izlenebilirlik |
-| Raporlama | Dashboard metrikleri, lisans maliyeti, departman dağılımları ve özet kartlar |
+| Authentication | JWT-based authentication, bcrypt password hashing, password policies, and mandatory password reset support |
+| Authorization | API and interface restrictions for IT Manager, IT Support, Procurement, and Employee roles |
+| Hardware Management | Hardware creation, updates, status tracking, assignment, and return management |
+| License Management | License creation, updates, expiration tracking, user limits, and seat capacity controls |
+| Assignment Management | Hardware and software license allocation, approval, rejection, and return workflows |
+| Incident Management | Employee incident reporting, IT support status updates, and process tracking |
+| Procurement | Supplier and invoice management |
+| Notifications | In-app notifications generated 30, 15, and 7 days before license expiration |
+| Auditing | Administrative logging and operational traceability |
+| Reporting | Dashboard metrics, license cost analysis, department distribution statistics, and summary cards |
 
-## Son Geliştirmeler
+# Recent Improvements
 
-Bu sürümde proje, teslim kriterlerine daha uygun ve daha düzenli bir yapıya kavuşturulmuştur:
+In this release, the project has been restructured to better satisfy delivery requirements and improve maintainability:
 
-- Kök dizine backend ve frontend'i birlikte çalıştıran `npm run dev:full` komutu eklenmiştir.
-- `README.md`, kurulum, çalıştırma, test, ekran görüntüleri ve katkı bölümleriyle daha düzenli hale getirilmiştir.
-- `.gitignore` dosyası `node_modules`, build çıktıları, `.env` dosyaları ve SQLite veritabanı dosyalarını dışlayacak şekilde genişletilmiştir.
-- Lisanslara kişi limiti ve koltuk kapasitesi eklenmiştir.
-- Lisans kapasitesi dolduğunda yeni atama yapılması engellenmiştir.
-- Donanım durumu değiştiğinde aktif zimmet kaydı otomatik olarak kapatılacak şekilde iş kuralı eklenmiştir.
-- Backend testleri ve frontend build doğrulaması yapılmıştır.
+- Added the `npm run dev:full` command to run both backend and frontend services simultaneously from the root directory.
+- Improved the `README.md` structure with clearer sections for installation, execution, testing, screenshots, and contributions.
+- Expanded the `.gitignore` file to exclude `node_modules`, build artifacts, `.env` files, and SQLite database files.
+- Added user limits and seat capacity tracking for software licenses.
+- Prevented new allocations when license capacity has been reached.
+- Implemented a business rule that automatically closes active assignments when hardware status changes.
+- Completed backend testing and frontend build verification.
 
-## Kullanılan Teknolojiler
+# Technology Stack
 
-| Katman | Teknolojiler |
+| Layer | Technologies |
 | --- | --- |
 | Backend | Node.js, Express.js, better-sqlite3, JWT, bcryptjs, node-cron, Nodemailer |
 | Frontend | React 18, Vite 5, Tailwind CSS, React Router, Axios, Recharts, react-hot-toast |
-| Veritabanı | SQLite |
-| Test | Node.js built-in test runner |
-| Paket yönetimi | npm |
-| Dokümantasyon | Markdown |
+| Database | SQLite |
+| Testing | Node.js built-in test runner |
+| Package Management | npm |
+| Documentation | Markdown |
 
-## Klasör Yapısı
+# Project Structure
 
 ```text
 ULVIS/
 |-- kaynak-kodlar/
 |   |-- backend/
-|   |   |-- config/             # Veritabanı bağlantısı ve şema işlemleri
-|   |   |-- middleware/         # Kimlik doğrulama, rol kontrolü ve denetim yapıları
-|   |   |-- routes/             # REST API uçları
-|   |   |-- services/           # Bildirim, e-posta ve audit servisleri
-|   |   |-- test/               # Backend test dosyaları
-|   |   |-- seed.js             # Örnek veri yükleme
-|   |   `-- server.js           # Express uygulaması
+|   |   |-- config/             # Database connection and schema operations
+|   |   |-- middleware/         # Authentication, role control, and auditing layers
+|   |   |-- routes/             # REST API endpoints
+|   |   |-- services/           # Notification, email, and audit services
+|   |   |-- test/               # Backend test files
+|   |   |-- seed.js             # Sample data seeding
+|   |   `-- server.js           # Express application entry point
 |   `-- frontend/
-|       |-- public/             # Statik dosyalar
+|       |-- public/             # Static assets
 |       `-- src/
-|           |-- components/     # Ortak arayüz bileşenleri
-|           |-- context/        # Kimlik ve oturum context yapısı
-|           |-- pages/          # Sayfa bileşenleri
-|           |-- routes/         # Uygulama rota yapısı
-|           `-- services/       # Axios API istemcisi
-|-- dokumantasyon/              # Ek proje notları ve teslim içeriği için ayrılan klasör
+|           |-- components/     # Shared UI components
+|           |-- context/        # Authentication and session context
+|           |-- pages/          # Page components
+|           |-- routes/         # Application routing
+|           `-- services/       # Axios API client
+|-- dokumantasyon/              # Additional project notes and submission materials
 |-- gorseller/
-|   |-- screenshots/            # README ve teslim için ekran görüntüleri
+|   |-- screenshots/            # Screenshots for README and project submission
 |   `-- logo.png
 |-- scripts/
-|   `-- dev-full.js             # Backend ve frontend ortak geliştirme başlatıcısı
+|   `-- dev-full.js             # Unified development launcher
 |-- .gitignore
-|-- package.json                # Kök npm komutları
+|-- package.json                # Root npm scripts
 `-- README.md
 ```
 
-## Kurulum
+# Installation
 
-### Gereksinimler
+## Requirements
 
-- Node.js 18 veya üzeri
+- Node.js 18 or later
 - npm
 - Git
 
-### Depoyu klonlama
+## Clone the Repository
 
 ```bash
 git clone https://github.com/Wrindzler/gordon.git
 cd gordon
 ```
 
-### Tüm bağımlılıkları kurma
+## Install Dependencies
 
-Kök dizinden tek komutla backend ve frontend bağımlılıkları kurulabilir:
+All backend and frontend dependencies can be installed from the root directory using a single command:
 
 ```bash
 npm run install:all
 ```
 
-İsterseniz bağımlılıkları ayrı ayrı da kurabilirsiniz:
+Alternatively, dependencies can be installed separately:
 
 ```bash
 cd kaynak-kodlar/backend
@@ -162,89 +163,90 @@ cd ../frontend
 npm install
 ```
 
-## Çalıştırma
+# Running the Application
 
-### Tek komutla geliştirme modu
+## Development Mode with a Single Command
 
-Kök dizinden aşağıdaki komut çalıştırılır:
+Run the following command from the root directory:
 
 ```bash
 npm run dev:full
 ```
 
-Bu komut:
+This command:
 
-- Backend bağımlılıkları eksikse kurar.
-- Frontend bağımlılıkları eksikse kurar.
-- Backend API sunucusunu `http://localhost:5000` adresinde başlatır.
-- Frontend Vite sunucusunu `http://localhost:3000` adresinde başlatır.
-- Terminal çıktısını `[backend]` ve `[frontend]` etiketleriyle ayırır.
+- Installs backend dependencies if they are missing.
+- Installs frontend dependencies if they are missing.
+- Starts the backend API server at `http://localhost:5000`.
+- Starts the frontend Vite server at `http://localhost:3000`.
+- Separates terminal output using `[backend]` and `[frontend]` labels.
 
-### Ayrı çalıştırma
+## Running Services Separately
 
-Backend:
+### Backend
 
 ```bash
 cd kaynak-kodlar/backend
 npm run dev
 ```
 
-Frontend:
+### Frontend
 
 ```bash
 cd kaynak-kodlar/frontend
 npm run dev
 ```
 
-### Veritabanı seed işlemi
+## Database Seeding
 
-Geliştirme ortamında örnek kullanıcı ve örnek veri oluşturmak için:
+To generate sample users and development data:
 
 ```bash
 cd kaynak-kodlar/backend
 npm run seed
 ```
 
-> `npm run seed` mevcut geliştirme veritabanını sıfırlayabilir. Üretim ortamında dikkatli kullanılmalıdır.
+> Running `npm run seed` may reset the existing development database. Use with caution in production environments.
 
-## Ortam Değişkenleri
+# Environment Variables
 
-Backend için `kaynak-kodlar/backend/.env.example` dosyası `.env` adıyla kopyalanabilir.
+The backend `.env.example` file can be copied as `.env`:
 
 ```env
 PORT=5000
-JWT_SECRET=gelistirme-icin-uzun-bir-anahtar-yazin
+JWT_SECRET=write-a-long-development-secret-key
 DB_PATH=./database.sqlite
 APP_URL=http://localhost:3000
 RESET_TOKEN_TTL_MINUTES=60
 
-# SMTP opsiyoneldir. Tum alanlar dolu degilse e-posta gonderimi atlanir.
+# SMTP configuration is optional.
+# Email delivery will be skipped if fields are incomplete.
 # SMTP_HOST=
 # SMTP_PORT=587
 # SMTP_SECURE=false
 # SMTP_USER=
 # SMTP_PASS=
-# SMTP_FROM="ULVIS <no-reply@ornek.com>"
+# SMTP_FROM="ULVIS <no-reply@example.com>"
 ```
 
-> `.env` dosyası GitHub'a yüklenmemelidir. Bu dosya `.gitignore` ile hariç tutulur.
+> The `.env` file should never be committed to GitHub and is excluded through `.gitignore`.
 
-## Örnek Hesaplar
+# Sample Accounts
 
-`npm run seed` sonrasında kullanılabilecek geliştirme hesapları:
+The following development accounts become available after running `npm run seed`:
 
-| Rol | E-posta | Şifre |
+| Role | Email | Password |
 | --- | --- | --- |
-| IT Müdürü | `admin@ulvis.com.tr` | `admin123` |
-| IT Destek | `itdestek@ulvis.com.tr` | `destek123` |
-| Satınalma | `satinalma@ulvis.com.tr` | `satin123` |
-| Personel | `ali.ozturk@ulvis.com.tr` | `personel123` |
+| IT Manager | `admin@ulvis.com.tr` | `admin123` |
+| IT Support | `itdestek@ulvis.com.tr` | `destek123` |
+| Procurement | `satinalma@ulvis.com.tr` | `satin123` |
+| Employee | `ali.ozturk@ulvis.com.tr` | `personel123` |
 
-> Bu hesaplar yalnızca yerel geliştirme ve test amacıyla kullanılmalıdır.
+> These accounts are intended solely for local development and testing purposes.
 
-## Test ve Doğrulama
+# Testing and Validation
 
-Kök dizinden aşağıdaki doğrulamalar çalıştırılabilir:
+The following validation commands can be executed from the root directory:
 
 ```bash
 npm run test
@@ -252,11 +254,11 @@ npm run build
 npm run audit:high
 ```
 
-Bu komutlarla backend testleri, frontend build çıktısı ve güvenlik denetimi ayrı ayrı doğrulanabilir.
+These commands verify backend tests, frontend build output, and security audit checks.
 
-## Ekran Görüntüleri
+# Screenshots
 
-Ekran görüntüleri `gorseller/screenshots/` klasöründe tutulur. README içinde kullanılacak dosya adları kısa ve açıklayıcı olmalıdır:
+Screenshots are stored under the `gorseller/screenshots/` directory. File names used in the README should remain concise and descriptive:
 
 ```text
 gorseller/screenshots/login.png
@@ -266,56 +268,50 @@ gorseller/screenshots/allocations.png
 gorseller/screenshots/hardware.png
 ```
 
-Örnek kullanım:
+Example usage:
 
 ```markdown
-![ULVİS Login](gorseller/screenshots/login.png)
+![ULVIS Login](gorseller/screenshots/login.png)
 ```
 
-> Teslim öncesinde ekran görüntülerinde kişisel veri veya gerçek parola bulunmamasına dikkat edilmelidir.
+> Before submission, ensure that screenshots do not contain personal data or real passwords.
 
-GitHub tesliminde depoda bulunması beklenen ana dosya ve klasörler:
+The following files and directories are expected to be included in the GitHub submission:
 
 - `kaynak-kodlar/`
 - `README.md`
 - `.gitignore`
 - `package.json`
-- `dokumantasyon/` (varsa ek notlar için)
+- `dokumantasyon/` (optional additional notes)
 - `gorseller/screenshots/`
-- Backend ve frontend `package.json` dosyaları
-- Test dosyaları
+- Backend and frontend `package.json` files
+- Test files
 
-## Geliştirme Önerileri
+# Future Enhancements
 
-Gelecekte yapılabilecek geliştirmeler:
+Potential future improvements include:
 
-- Docker tabanlı kurulum dosyalarının eklenmesi
-- GitHub Actions ile otomatik test ve build hattı kurulması
-- Daha kapsamlı frontend testlerinin eklenmesi
-- Rol ve izin yönetiminin daha ayrıntılı hale getirilmesi
-- Demo verisinin ve ekran görüntülerinin standartlaştırılması
+- Adding Docker-based deployment configurations
+- Establishing automated CI/CD pipelines with GitHub Actions
+- Expanding frontend testing coverage
+- Implementing more granular role and permission management
+- Standardizing demo datasets and screenshots
 
-## Katkıda Bulunanlar
+# Contributors
 
-| Ekip Üyesi | Sorumluluk |
+| Team Member | Responsibility |
 | --- | --- |
-| Emre Berk Güç | Backend liderliği, API servisleri, kimlik doğrulama mimarisi |
-| Kaan Emre Demir | Backend destek, bildirim servisleri, dağıtım ve test süreçleri |
-| Beste Tuana Çuhadar | Raporlama, dokümantasyon, ER ve UML çalışmaları |
-| Zeynep Zehra Kocatürk | Frontend liderliği, arayüz geliştirme, UI/UX akışları |
-| Selim İşkodra | Frontend destek, entegrasyon ve kullanıcı testleri |
+| Emre Berk Güç | Backend leadership, API services, authentication architecture |
+| Kaan Emre Demir | Backend support, notification services, deployment and testing |
+| Beste Tuana Çuhadar | Reporting, documentation, ER and UML design |
+| Zeynep Zehra Kocatürk | Frontend leadership, UI development, UX workflows |
+| Selim İşkodra | Frontend support, integration, and user testing |
 
-## Lisans
+# License
 
-Bu proje akademik ve eğitim amaçlı geliştirilmiştir.
-
-Kocaeli Sağlık ve Teknoloji Üniversitesi  
-Mühendislik ve Doğa Bilimleri Fakültesi  
-Yazılım Mühendisliği Bölümü
-
----
+This project was developed for academic and educational purposes.
 
 <p align="center">
-  <strong>ULVİS</strong><br>
-  Kurumsal Lisans ve Varlık İzleme Sistemi
+  <strong>ULVIS</strong><br>
+  Enterprise License and Asset Tracking System
 </p>
