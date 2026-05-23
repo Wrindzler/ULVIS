@@ -287,7 +287,6 @@ These commands verify backend tests, frontend build output, and security audit c
 - [Fault Requests](gorseller/screenshots/Fault%20Requests.png)
 - [Reset Password Screen](gorseller/screenshots/Reset%20Password%20Screen.png)
 
-> Before submission, ensure that screenshots do not contain personal data or real passwords.
 
 
 # Future Enhancements
