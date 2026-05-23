@@ -258,21 +258,34 @@ These commands verify backend tests, frontend build output, and security audit c
 
 # Screenshots
 
-Screenshots are stored under the `gorseller/screenshots/` directory. File names used in the README should remain concise and descriptive:
+## Login
 
-```text
-gorseller/screenshots/login.png
-gorseller/screenshots/dashboard.png
-gorseller/screenshots/licenses.png
-gorseller/screenshots/allocations.png
-gorseller/screenshots/hardware.png
-```
+![ULVIS Login Screen](gorseller/screenshots/Login%20Screen.png)
 
-Example usage:
+## IT Manager Dashboard
 
-```markdown
-![ULVIS Login](gorseller/screenshots/login.png)
-```
+![ULVIS IT Manager Dashboard](gorseller/screenshots/IT%20Manager%20Dashboard.png)
+
+## Software License Management
+
+![ULVIS Software License Management](gorseller/screenshots/Software%20License%20Management.png)
+
+## Asset Assignment Management
+
+![ULVIS Asset Assignment Management](gorseller/screenshots/Asset%20Assignment%20Management.png)
+
+## Hardware Management
+
+![ULVIS Hardware Management](gorseller/screenshots/IT%20Support%20Hardware%20Management%20Screen.png)
+
+## Additional Screens
+
+- [IT Manager Panel](gorseller/screenshots/IT%20Manager%20Panel.png)
+- [IT Manager Notifications](gorseller/screenshots/IT%20Manager%20Notifications.png)
+- [Database Management Page](gorseller/screenshots/Database%20Management%20Page.png)
+- [Supplier Management](gorseller/screenshots/Supplier%20Management.png)
+- [Fault Requests](gorseller/screenshots/Fault%20Requests.png)
+- [Reset Password Screen](gorseller/screenshots/Reset%20Password%20Screen.png)
 
 > Before submission, ensure that screenshots do not contain personal data or real passwords.
 
