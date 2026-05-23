@@ -1,4 +1,4 @@
-<h1 align="center">ULVİS</h1>
+<h1 align="center">ULVIS</h1>
 
 <p align="center">
   <strong>Kurumsal Lisans ve Varlık İzleme Sistemi</strong><br>
